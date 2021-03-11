@@ -18,10 +18,13 @@ My current research interests including the fields of Natural Language Processin
 Feel free to contact me for anything. Thank you!
 
 <h1 style="margin-top:35px; border: none;">News</h1>
+<h3 style="margin-top:5px;">2021</h3>
+------
+* 1 Paper accepted at NAACL 2021
+* 1 paper accepted at AAAI 2021
+
 <h3 style="margin-top:5px;">2020</h3>
 ------
-
-* 1 paper accepted at AAAI 2021
 * 2 papers accepted at EMNLP 2020 (1 Findings and 1 Workshop)
 * 1 paper accepted at AACL 2020
 * 1 paper accepted at SemEval 2020
