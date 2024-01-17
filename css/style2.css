@@ -57,7 +57,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	padding: 0;
 	border: 0;
 	font-size: 101%;
-	font-family: 'Candara', 'Candara', 'Candara';
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	vertical-align: baseline;
 }
 body {
@@ -1677,7 +1677,7 @@ img#wpstats {
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
 	body {
-		background-color: #e6e6e6;
+		background-color: #FAFAFA;
 	}
 	body .site {
 		padding: 0 40px;
