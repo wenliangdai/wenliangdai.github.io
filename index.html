@@ -162,57 +162,133 @@
       margin-top: 100px;
     }
 
-    @media screen and (max-width: 700px) {
+    @media (max-width:980px) {
       .container {
-        width: 400px;
+        width: 80%;
+      }
+
+      .portrait {
+        border-radius: 5px;
+        margin-left: 4px;
+        width: 40%;
+      }
+
+      .name {
+        font-size: 86px;
+        margin-top: 32px;
+        color: #212121;
+      }
+
+      .affiliation {
+        font-size: 36px;
+        margin-top: 20px;
+        color: #2f3f49;
+        margin-left: 1px;
+      }
+
+      .follow {
+        font-size: 24px;
+        margin-top: 80px;
+        color: #2f3f49;
+        margin-left: 1px;
+      }
+
+      .social-media {
+        margin-top: 8px;
+        margin-left: -2px;
+      }
+
+      .icon {
+        width: 48px;
+        margin-right: 32px;
+        color: #2f3f49;
+      }
+
+      .icon-gs {
+        width: 52px;
+      }
+
+      .icon-sm {
+        width: 40px;
+        margin-right: 38px;
+      }
+
+      .icon-lg {
+        width: 64px;
+      }
+
+      .bottom {
+        width: 50px;
+        margin-top: 120px;
+        margin-left: 1px;
       }
     }
 
-    .portrait {
-      border-radius: 5px;
-      margin-left: 4px;
+    @media (min-width:981px) {
+      .portrait {
+        border-radius: 5px;
+        margin-left: 4px;
+        width: 120px;
+      }
+
+      .name {
+        font-size: 42px;
+        margin-top: 28px;
+        color: #212121;
+      }
+
+      .affiliation {
+        font-size: 18px;
+        margin-top: 10px;
+        color: #2f3f49;
+        margin-left: 1px;
+      }
+
+      .follow {
+        font-size: 12px;
+        margin-top: 40px;
+        color: #2f3f49;
+        margin-left: 1px;
+      }
+
+      .social-media {
+        margin-top: 2px;
+        margin-left: -2px;
+      }
+
+      .icon {
+        width: 24px;
+        margin-right: 18px;
+        color: #2f3f49;
+      }
+
+      .icon-gs {
+        width: 26px;
+      }
+
+      .icon-sm {
+        width: 20px;
+        margin-right: 20px;
+      }
+
+      .icon-lg {
+        width: 35px;
+      }
+
+      .bottom {
+        width: 30px;
+        margin-top: 100px;
+        margin-left: 1px;
+      }
     }
 
-    .name {
-      font-size: 42px;
-      margin-top: 28px;
-      color: #212121;
-    }
-
-    .affiliation {
-      font-size: 18px;
-      margin-top: 10px;
-      color: #2f3f49;
-      margin-left: 1px;
-    }
-
-    .follow {
-      font-size: 12px;
-      margin-top: 40px;
-      color: #2f3f49;
-      margin-left: 1px;
-    }
-
-    .social-media {
-      margin-top: 2px;
-      margin-left: -2px;
-    }
-
-    .icon {
-      width: 24px;
-      margin-right: 18px;
-    }
-
-    .bottom {
-      width: 30px;
-      margin-top: 100px;
-      margin-left: 1px;
-    }
   </style>
 </head>
+
 <body>
+
 <div class="container">
-  <img class="portrait" src="./image/dwl_square.jpg" alt="portrait" width="120">
+  <img class="portrait" src="./image/dwl_square.jpg" alt="portrait">
 
   <div class="lato-bold name">Wenliang Dai</div>
   <div class="affiliation">
@@ -222,16 +298,26 @@
   <div class="lato-bold follow">FOLLOW ME ON</div>
 
   <div class="social-media">
-    <a target=”_blank” href="https://scholar.google.com/citations?user=-_xy3jAAAAAJ&hl=en/"><img class="icon" src="./image/google-scholar.png" style="width: 26px; transform: translateY(1px);"></a>
+    <a target=”_blank” href="https://scholar.google.com/citations?user=-_xy3jAAAAAJ&hl=en/"><img class="icon icon-gs" src="./image/google-scholar.png" style="transform: translateY(1px);"></a>
     <a target=”_blank” href="https://twitter.com/Wenliang_Dai/"><img class="icon" src="./image/twitter.svg"></a>
-    <a target=”_blank” href="https://github.com/wenliangdai/"><img class="icon" src="./image/github.svg" style="margin-right: 20px;"></a>
-    <a target=”_blank” href="https://www.linkedin.com/in/wenliang-dai-145116123/"><img class="icon" src="./image/linkedin.png" style="width: 20px; margin-bottom: 2px; margin-right: 20px;"></a>
-    <a target=”_blank” href="https://www.instagram.com/wenliangdai/"><img class="icon" src="./image/instagram.svg" style="width: 20px; margin-bottom: 2px; margin-right: 20px;"></a>
-    <a target=”_blank” href="https://www.zhihu.com/people/wenliangdai/"><img class="icon" src="./image/zhihu.png" style="width: 34px; transform: translateY(5px);"></a>
-    <a target=”_blank” href="https://www.xiaohongshu.com/user/profile/5b110ad311be10783ddc6525"><img class="icon" src="./image/xiaohongshu.svg" style="width: 36px; transform: translateY(6px);"></a>
+    <a target=”_blank” href="https://github.com/wenliangdai/"><img class="icon" src="./image/github.svg"></a>
+    <a target=”_blank” href="https://www.linkedin.com/in/wenliang-dai-145116123/"><img class="icon icon-sm" src="./image/linkedin.png" style="margin-bottom: 2px;"></a>
+    <a target=”_blank” href="https://www.instagram.com/wenliangdai/"><img class="icon icon-sm" src="./image/instagram.svg" style="margin-bottom: 2px;"></a>
+    <a target=”_blank” href="https://www.zhihu.com/people/wenliangdai/"><img class="icon icon-lg" src="./image/zhihu.png" style="transform: translateY(5px);"></a>
+    <a target=”_blank” href="https://www.xiaohongshu.com/user/profile/5b110ad311be10783ddc6525"><img class="icon icon-lg" src="./image/xiaohongshu.svg" style="transform: translateY(6px);"></a>
   </div>
 
   <img class="bottom" src="./image/balloons.png">
 </div>
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>
