@@ -6,94 +6,83 @@
 <title>Wenliang Dai — Senior Research Scientist @ NVIDIA</title>
 <meta name="description" content="Wenliang Dai is a Senior Research Scientist at NVIDIA working on post-training large language models, multimodal alignment, and reasoning-capable AI systems.">
 <meta name="author" content="Wenliang Dai">
+<link rel="canonical" href="https://wenliangdai.github.io/">
 
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://wenliangdai.github.io/">
 <meta property="og:title" content="Wenliang Dai — Senior Research Scientist @ NVIDIA">
 <meta property="og:description" content="Post-training large language models, multimodal alignment, and reasoning-capable AI systems.">
-<meta property="og:image" content="./image/dwl_square.jpg">
+<meta property="og:image" content="https://wenliangdai.github.io/image/dwl_square.jpg">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Wenliang Dai — Senior Research Scientist @ NVIDIA">
 <meta name="twitter:description" content="Post-training large language models, multimodal alignment, and reasoning-capable AI systems.">
-<meta name="twitter:image" content="./image/dwl_square.jpg">
+<meta name="twitter:image" content="https://wenliangdai.github.io/image/dwl_square.jpg">
 
 <link rel="icon" href="./image/dwl_square.jpg">
+<link rel="apple-touch-icon" href="./image/dwl_square.jpg">
+
+<!-- Light is the default; dark applies only if the visitor chose it. Runs before paint to avoid a flash. -->
+<script>
+  try {
+    if (localStorage.getItem("theme-preference") === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Source+Serif+4:opsz,wght@8..60,500..700&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    --max-width: 860px;
+    --measure: 58rem;
+    --gutter: clamp(1.25rem, 0.6rem + 3vw, 2rem);
 
-    /* Light — warm paper */
-    --bg: #fbfaf7;
-    --bg-elev: #ffffff;
-    --nav-bg: rgba(251, 250, 247, 0.78);
-    --text: #232020;
-    --text-soft: #5c5752;
-    --text-faint: #8a847d;
-    --rule: #e7e2d9;
-    --rule-soft: #efebe3;
-    --accent: #1f3a68;        /* deep ink-blue */
-    --accent-hover: #14254a;
-    --on-accent: #ffffff;
-    --tag-bg: #f1ede4;
-    --tag-text: #4a453f;
-    --selection: #d9e1f0;
-    --shadow-card: 0 1px 2px rgba(31, 30, 28, 0.05), 0 12px 32px -14px rgba(31, 30, 28, 0.16);
-    --gold-text: #8a6914;
-    --gold-bg: #f8efd3;
-    --gold-border: #e6d39c;
+    /* Light — warm paper (default) */
+    --bg: #fcfbf8;
+    --text: #1d1c1a;
+    --text-body: #37342f;
+    --text-soft: #524e48;
+    --text-faint: #736d65;
+    --rule: #e7e3db;
+    --accent: #1d4f91;          /* ink blue */
+    --accent-hover: #123a70;
+    --accent-line: rgba(29, 79, 145, 0.3);
+    --chip-bg: #f2efe8;
+    --chip-text: #46423c;
+    --gold-text: #86600f;
+    --gold-bg: #fbf3dc;
+    --gold-rule: #ecdcab;
+    --ring: rgba(29, 28, 26, 0.08);
+    --selection: #dbe5f3;
 
-    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-  }
+    --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #15140f;
-      --bg-elev: #1c1b15;
-      --nav-bg: rgba(21, 20, 15, 0.74);
-      --text: #ece8df;
-      --text-soft: #b7b1a4;
-      --text-faint: #8d877b;
-      --rule: #322f27;
-      --rule-soft: #28261f;
-      --accent: #9db8e6;       /* lighter ink-blue for AA contrast on dark */
-      --accent-hover: #c2d3ef;
-      --on-accent: #15140f;
-      --tag-bg: #26241d;
-      --tag-text: #cac4b6;
-      --selection: #2c3a55;
-      --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.45), 0 14px 36px -16px rgba(0, 0, 0, 0.7);
-      --gold-text: #e3c578;
-      --gold-bg: #2c2613;
-      --gold-border: #4d4220;
-    }
+    color-scheme: light;
   }
 
   :root[data-theme="dark"] {
-    --bg: #15140f;
-    --bg-elev: #1c1b15;
-    --nav-bg: rgba(21, 20, 15, 0.74);
-    --text: #ece8df;
-    --text-soft: #b7b1a4;
-    --text-faint: #8d877b;
-    --rule: #322f27;
-    --rule-soft: #28261f;
-    --accent: #9db8e6;
-    --accent-hover: #c2d3ef;
-    --on-accent: #15140f;
-    --tag-bg: #26241d;
-    --tag-text: #cac4b6;
-    --selection: #2c3a55;
-    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.45), 0 14px 36px -16px rgba(0, 0, 0, 0.7);
+    --bg: #141412;
+    --text: #ebe8e1;
+    --text-body: #d6d2c9;
+    --text-soft: #b5b0a6;
+    --text-faint: #8f897f;
+    --rule: #2d2b26;
+    --accent: #93b4e8;
+    --accent-hover: #bcd0f1;
+    --accent-line: rgba(147, 180, 232, 0.35);
+    --chip-bg: #22211d;
+    --chip-text: #c9c4b9;
     --gold-text: #e3c578;
-    --gold-bg: #2c2613;
-    --gold-border: #4d4220;
+    --gold-bg: #2a2413;
+    --gold-rule: #4a3f1f;
+    --ring: rgba(255, 255, 255, 0.08);
+    --selection: #2b3a55;
+
+    color-scheme: dark;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
@@ -112,10 +101,9 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: var(--font-sans);
-    font-size: clamp(1.02rem, 0.97rem + 0.25vw, 1.15rem);
-    line-height: 1.6;
-    font-weight: 400;
+    font-family: var(--sans);
+    font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -126,17 +114,18 @@
 
   a {
     color: var(--accent);
-    text-decoration: none;
-    text-underline-offset: 0.18em;
-    text-decoration-thickness: 0.06em;
-    transition: color 0.18s ease, text-decoration-color 0.18s ease;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-line);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    transition: color 0.15s ease, text-decoration-color 0.15s ease;
   }
-  a:hover { color: var(--accent-hover); text-decoration: underline; }
+  a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 
   :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
-    border-radius: 2px;
+    border-radius: 3px;
   }
 
   .skip-link {
@@ -144,527 +133,443 @@
     left: -9999px;
     top: 0;
     background: var(--accent);
-    color: var(--on-accent);
+    color: var(--bg);
     padding: 0.6em 1em;
     z-index: 100;
     border-radius: 0 0 6px 0;
   }
   .skip-link:focus { left: 0; }
 
+  .icon {
+    width: 1em;
+    height: 1em;
+    flex: 0 0 auto;
+    display: block;
+  }
+
   .wrap {
-    max-width: var(--max-width);
+    position: relative;
+    max-width: calc(var(--measure) + 2 * var(--gutter));
     margin: 0 auto;
-    padding: clamp(2.2rem, 1.5rem + 3.5vw, 4rem) clamp(1.25rem, 0.6rem + 3vw, 2rem) 4rem;
+    padding: clamp(3.75rem, 2.5rem + 4vw, 6rem) var(--gutter) 3rem;
   }
 
   /* ---- Theme toggle ---- */
   .toggle {
-    position: fixed;
-    top: clamp(0.8rem, 0.4rem + 1.2vw, 1.4rem);
-    right: clamp(0.8rem, 0.4rem + 1.2vw, 1.4rem);
-    z-index: 50;
+    position: absolute;
+    top: clamp(1rem, 0.6rem + 1.5vw, 1.75rem);
+    right: var(--gutter);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
     border: 1px solid var(--rule);
-    background: var(--nav-bg);
-    -webkit-backdrop-filter: saturate(180%) blur(8px);
-    backdrop-filter: saturate(180%) blur(8px);
-    color: var(--text-soft);
     border-radius: 50%;
+    background: transparent;
+    color: var(--text-faint);
     cursor: pointer;
-    transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    transition: color 0.15s ease, border-color 0.15s ease;
   }
-  .toggle:hover { color: var(--accent); border-color: var(--accent); transform: scale(1.06); box-shadow: var(--shadow-card); }
-  .toggle svg { width: 1.05rem; height: 1.05rem; display: block; }
-  .toggle .icon-sun { display: block; }
-  .toggle .icon-moon { display: none; }
-  :root[data-theme="dark"] .toggle .icon-sun { display: none; }
-  :root[data-theme="dark"] .toggle .icon-moon { display: block; }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .toggle .icon-sun { display: none; }
-    :root:not([data-theme="light"]) .toggle .icon-moon { display: block; }
-  }
-  :root[data-theme="light"] .toggle .icon-sun { display: block; }
-  :root[data-theme="light"] .toggle .icon-moon { display: none; }
+  .toggle:hover { color: var(--text); border-color: var(--text-faint); }
+  .toggle .icon { width: 1rem; height: 1rem; }
+  .toggle .i-sun { display: none; }
+  :root[data-theme="dark"] .toggle .i-sun { display: block; }
+  :root[data-theme="dark"] .toggle .i-moon { display: none; }
 
   /* ---- Header ---- */
-  header.intro {
+  .intro {
     display: flex;
     align-items: center;
-    gap: clamp(1.1rem, 0.6rem + 2.5vw, 1.9rem);
-    margin-bottom: 2rem;
+    gap: clamp(1.25rem, 0.8rem + 2vw, 2rem);
+    margin: 0 0 2.25rem;
   }
   .avatar {
     flex: 0 0 auto;
-    width: clamp(84px, 70px + 6vw, 116px);
+    width: clamp(88px, 72px + 5vw, 124px);
     height: auto;
-    aspect-ratio: 1 / 1;        /* CLS prevention (from B) */
+    aspect-ratio: 1 / 1;
     border-radius: 12px;
     object-fit: cover;
-    border: 1px solid var(--rule);
-    box-shadow: var(--shadow-card);
+    box-shadow: 0 0 0 1px var(--ring);
   }
   .intro-text { min-width: 0; }
-  h1.name {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(1.8rem, 1.35rem + 2.2vw, 2.5rem);
-    line-height: 1.08;
+  .name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(2rem, 1.55rem + 2vw, 2.65rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     margin: 0 0 0.3rem;
-    letter-spacing: -0.025em;
   }
-  .role {
+  .position {
     margin: 0;
     color: var(--text-soft);
-    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.12rem);
-    line-height: 1.4;
+    font-size: 1.05rem;
+    line-height: 1.45;
   }
-  .role .org { color: var(--text); font-weight: 500; }
-  .email {
-    margin: 0.55rem 0 0;
-    font-family: var(--font-sans);
-    font-size: 0.96rem;
-    line-height: 1.4;
-    color: var(--text-soft);
-  }
-  .bio {
-    margin: 1.5rem 0 2.4rem;
-    padding: 1.05rem 1.3rem;
-    background: var(--bg-elev);
-    border: 1px solid var(--rule);
-    border-radius: 12px;
-    box-shadow: var(--shadow-card);
-    color: var(--text-soft);
-    font-size: 1rem;
-    line-height: 1.7;
-  }
+  .position .org { color: var(--text); font-weight: 500; }
 
-  /* ---- Primary links row ---- */
-  .links {
+  .contact {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 0.65rem;
-    margin: 0 0 2.6rem;
+    align-items: center;
+    gap: 0.35rem 1.15rem;
+    margin: 0.8rem 0 0;
     padding: 0;
     list-style: none;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
-  .links a {
+  .contact li { display: flex; }
+  .contact a {
     display: inline-flex;
     align-items: center;
-    gap: 0.42em;
-    padding: 0.34em 0.78em;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
+    gap: 0.45em;
     color: var(--text-soft);
-    font-family: var(--font-sans);
-    font-size: 0.92rem;
-    line-height: 1;
-    background: var(--bg-elev);
-    transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
-  }
-  .links a:hover {
-    color: var(--accent);
-    border-color: color-mix(in srgb, var(--accent) 55%, var(--rule));
-    background: color-mix(in srgb, var(--accent) 7%, var(--bg-elev));
-    transform: translateY(-1px);
-    box-shadow: 0 5px 14px -6px color-mix(in srgb, var(--accent) 35%, transparent);
     text-decoration: none;
   }
-  .links svg {
-    width: 1em;
-    height: 1em;
-    flex: 0 0 auto;
+  .contact a .icon { color: var(--text-faint); transition: color 0.15s ease; }
+  .contact a:hover { color: var(--accent); }
+  .contact a:hover .icon { color: var(--accent); }
+  .contact .icon-link .icon { color: var(--text-soft); }
+
+  /* Lede: serif, set off by a thin accent rule */
+  .bio {
+    margin: 0 0 2rem;
+    padding-left: 1.35rem;
+    border-left: 2px solid var(--accent-line);
+    font-family: var(--serif);
+    font-size: 1.14em;
+    line-height: 1.7;
+    color: var(--text-body);
+    text-wrap: pretty;
   }
 
-  /* ---- Sections ---- */
-  main { display: block; }
-  section { margin: 0 0 2.9rem; }
-  section:last-of-type { margin-bottom: 0; }
-
-  /* Section heading */
-  .sec-head {
+  /* ---- Research interests ---- */
+  .interests {
     display: flex;
-    align-items: baseline;
-    gap: 0.7rem;
-    margin: 0 0 1.4rem;
-    padding-bottom: 0.6rem;
-    border-bottom: 1px solid var(--rule);
+    flex-direction: column;
+    gap: 0.65rem;
   }
-  .sec-head .kicker {
-    font-family: var(--mono);
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: var(--accent);
-    font-variant-numeric: tabular-nums;
-    line-height: 1.2;
-    flex: 0 0 auto;
-  }
-  .sec-head h2 {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: clamp(1.3rem, 1.15rem + 0.7vw, 1.5rem);
-    letter-spacing: -0.02em;
-    color: var(--text);
+  .label {
     margin: 0;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
     line-height: 1.2;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-faint);
   }
-
-  /* ---- Interest tags ---- */
   .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 0.55rem;
+    gap: 0.45rem;
     margin: 0;
     padding: 0;
     list-style: none;
   }
   .tags li {
-    font-size: 0.9rem;
-    color: var(--tag-text);
-    background: var(--tag-bg);
-    border-radius: 6px;
-    padding: 0.3em 0.7em;
-    line-height: 1.3;
+    padding: 0.28em 0.75em;
+    border-radius: 999px;
+    background: var(--chip-bg);
+    color: var(--chip-text);
+    font-size: 0.85rem;
+    line-height: 1.35;
   }
 
-  /* ---- Metrics: stat blocks on a dashed divider (from B) ---- */
+  /* ---- Sections ---- */
+  main { display: block; }
+  section { margin-top: clamp(3rem, 2.4rem + 2.4vw, 4.25rem); }
+
+  .sec-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 1.6rem;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.35rem, 1.25rem + 0.45vw, 1.55rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .sec-title::after {
+    content: "";
+    flex: 1 1 auto;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* ---- Scholar metrics (section currently hidden) ---- */
   .metrics {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.4rem 2.4rem;
+    gap: 1.25rem 2.5rem;
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  .metrics li {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-    position: relative;
-  }
-  .metrics li + li {
-    padding-left: 1.4rem;
-    border-left: 1px dashed var(--rule);
-  }
+  .metrics li { display: flex; flex-direction: column; gap: 0.2rem; }
   .metrics .num {
-    font-family: var(--font-display);
+    font-family: var(--serif);
     font-weight: 600;
-    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 1.95rem);
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 1.9rem);
     line-height: 1;
-    color: var(--text);
     font-variant-numeric: tabular-nums;
   }
   .metrics .lbl {
     font-size: 0.72rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
     color: var(--text-faint);
   }
   .metrics-src { display: block; margin-top: 0.9rem; font-size: 0.84rem; color: var(--text-faint); }
 
-  /* ---- Timeline entries: two-column date/role grid (from B) ---- */
-  .entry {
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 0.2rem 1.4rem;
-    margin: 0 0 1.5rem;
-  }
-  .entry:last-child { margin-bottom: 0; }
-  .entry .when {
-    font-family: var(--mono);
-    color: var(--text-faint);
-    font-size: 0.78rem;
-    line-height: 1.7;
-    white-space: nowrap;
-    font-variant-numeric: tabular-nums;
-    padding-top: 0.18rem;
-    letter-spacing: -0.01em;
-  }
-  .entry .body { min-width: 0; }
-  .entry .title {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.06rem;
-    color: var(--text);
-    display: block;
-  }
-  .entry .place { color: var(--text-soft); font-size: 0.98rem; }
-  .entry .detail { color: var(--text-soft); font-size: 0.96rem; margin: 0.3rem 0 0; }
-
   /* ---- Publications ---- */
-  ol.pubs {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    counter-reset: pub;
-  }
-  ol.pubs > li {
-    position: relative;
-    padding: 0 0 1.25rem 2.1rem;
-    margin: 0 0 1.25rem;
-    border-bottom: 1px solid var(--rule-soft);
-    counter-increment: pub;
-  }
-  ol.pubs > li:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
-  ol.pubs > li::before {
-    content: counter(pub);
-    position: absolute;
-    left: 0;
-    top: 0.16em;
-    font-family: var(--font-display);
-    font-size: 0.86rem;
-    color: var(--text-faint);
-    font-variant-numeric: tabular-nums;
-    line-height: 1;
-  }
-  .pub-title {
-    font-family: var(--font-display);
-    font-weight: 500;
-    font-size: 1.07rem;
-    line-height: 1.42;
-    color: var(--text);
-    margin: 0 0 0.3rem;
-  }
-  .pub-meta {
-    color: var(--text-soft);
-    font-size: 0.94rem;
-    line-height: 1.5;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.3em 0.5em;
-  }
-  .pub-meta .pub-date {
-    font-family: var(--mono);
-    color: var(--text-faint);
-    font-variant-numeric: tabular-nums;
-    font-size: 0.8rem;
-    letter-spacing: -0.01em;
-  }
-  .pub-meta .role {
-    color: var(--text-soft);
-    background: var(--bg-elev);
-    border: 1px solid var(--rule);
-    border-radius: 5px;
-    padding: 0.06em 0.5em;
-    font-size: 0.74rem;
-    font-weight: 500;
-    line-height: 1.45;
-  }
-  .pub-meta .award {
-    color: var(--gold-text);
-    background: var(--gold-bg);
-    border: 1px solid var(--gold-border);
-    border-radius: 5px;
-    padding: 0.06em 0.5em;
-    font-size: 0.78rem;
-    font-weight: 500;
-    line-height: 1.45;
-  }
-  /* ---- Per-paper resource links ---- */
-  .pub-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 0.45rem;
-    margin: 0.55rem 0 0;
-    padding: 0;
-    list-style: none;
-  }
-  .pub-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.36em;
-    padding: 0.2em 0.64em;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    background: var(--bg-elev);
-    color: var(--text-soft);
-    font-size: 0.8rem;
-    line-height: 1.5;
-    transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
-  }
-  .pub-links a:hover {
-    color: var(--accent);
-    border-color: color-mix(in srgb, var(--accent) 55%, var(--rule));
-    background: color-mix(in srgb, var(--accent) 7%, var(--bg-elev));
-    transform: translateY(-1px);
-    box-shadow: 0 5px 14px -6px color-mix(in srgb, var(--accent) 35%, transparent);
-    text-decoration: none;
-  }
-  .pub-links svg { width: 0.92em; height: 0.92em; flex: 0 0 auto; }
-
-  /* ---- Publication subsections ---- */
-  .pub-group { margin: 0 0 2.9rem; }
-  .pub-group:last-of-type { margin-bottom: 0; }
+  .pub-group + .pub-group { margin-top: 2.75rem; }
   .subhead {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    font-family: var(--font-sans);
-    font-weight: 600;
+    margin: 0 0 1.2rem;
+    font-family: var(--sans);
     font-size: 0.8rem;
+    font-weight: 650;
     line-height: 1.2;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--text-soft);
-    margin: 0 0 1.3rem;
+    color: var(--text);
   }
   .subhead::before {
     content: "";
     flex: 0 0 auto;
-    width: 1.4rem;
+    width: 1.1rem;
     height: 2px;
     border-radius: 1px;
     background: var(--accent);
   }
+
+  .pubs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .pubs > li + li { margin-top: 1.6rem; }
+  .pub-title {
+    margin: 0 0 0.25rem;
+    font-weight: 550;
+    font-size: 1.02rem;
+    line-height: 1.45;
+    color: var(--text);
+    text-wrap: pretty;
+  }
+  .pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem 0.5rem;
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  .pub-date {
+    color: var(--text-faint);
+    font-variant-numeric: tabular-nums;
+  }
+  .contrib::before {
+    content: "·";
+    margin-right: 0.5rem;
+    color: var(--text-faint);
+  }
+  .award {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.05em 0.6em;
+    border: 1px solid var(--gold-rule);
+    border-radius: 999px;
+    background: var(--gold-bg);
+    color: var(--gold-text);
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .award .icon { width: 0.95em; height: 0.95em; }
+
+  .pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.1rem;
+    margin: 0.4rem 0 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .pub-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.38em;
+    text-decoration-color: transparent;
+  }
+  .pub-links a:hover { text-decoration-color: currentColor; }
+  .pub-links .icon { width: 0.95em; height: 0.95em; }
+
+  /* ---- Experience & education ---- */
+  .entry {
+    display: grid;
+    grid-template-columns: 9.25rem minmax(0, 1fr);
+    gap: 0.15rem 1.5rem;
+  }
+  .entry + .entry { margin-top: 1.4rem; }
+  .entry .when {
+    padding-top: 0.12rem;
+    color: var(--text-faint);
+    font-size: 0.86rem;
+    line-height: 1.6;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .entry .title {
+    display: block;
+    font-weight: 600;
+    font-size: 1.02rem;
+    line-height: 1.45;
+    color: var(--text);
+  }
+  .entry .place { color: var(--text-soft); font-size: 0.96rem; }
+  .entry .detail {
+    margin: 0.35rem 0 0;
+    color: var(--text-soft);
+    font-size: 0.94rem;
+    text-wrap: pretty;
+  }
+
   /* ---- Footer ---- */
   footer {
-    margin-top: 3.4rem;
+    margin-top: clamp(3.5rem, 2.8rem + 2.8vw, 5rem);
     padding-top: 1.4rem;
     border-top: 1px solid var(--rule);
     color: var(--text-faint);
-    font-size: 0.86rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0.5rem 1rem;
+    font-size: 0.84rem;
   }
-  footer a { color: var(--text-soft); }
-  footer a:hover { color: var(--accent); }
 
   /* ---- Responsive ---- */
-  @media (max-width: 600px) {
-    .wrap { padding-top: 3.9rem; } /* clear the fixed theme toggle */
-  }
-  @media (max-width: 480px) {
-    .entry {
-      grid-template-columns: 1fr;
-      gap: 0.1rem;
+  @media (max-width: 560px) {
+    .intro {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.1rem;
     }
-    .entry .when { order: 2; padding-top: 0.15rem; }
-    .entry .body { order: 1; }
+    .bio { padding-left: 1rem; font-size: 1.06em; }
   }
-  @media (max-width: 380px) {
-    header.intro { gap: 1rem; }
-    .metrics { gap: 1.1rem 1.6rem; }
-    .metrics li + li { padding-left: 1.1rem; }
+  @media (max-width: 520px) {
+    .entry { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .entry .when { padding-top: 0; }
   }
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-paper" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/></g></symbol>
+  <symbol id="i-model" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="m3.3 7.5 8.7 5 8.7-5"/><path d="M12 22V12.5"/></g></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12.21c0 5.18 3.36 9.57 8.02 11.12.59.11.8-.26.8-.57v-2.2c-3.26.71-3.95-1.4-3.95-1.4-.53-1.36-1.3-1.72-1.3-1.72-1.07-.73.08-.72.08-.72 1.18.08 1.8 1.22 1.8 1.22 1.05 1.8 2.76 1.28 3.43.98.11-.77.41-1.28.74-1.58-2.6-.3-5.34-1.31-5.34-5.81 0-1.28.46-2.33 1.21-3.15-.12-.3-.52-1.5.12-3.13 0 0 .98-.32 3.22 1.2a11.2 11.2 0 0 1 5.86 0c2.24-1.52 3.22-1.2 3.22-1.2.64 1.63.24 2.83.12 3.13.75.82 1.21 1.87 1.21 3.15 0 4.51-2.75 5.5-5.36 5.79.42.37.8 1.1.8 2.22v3.29c0 .31.21.69.81.57 4.66-1.55 8.01-5.94 8.01-11.12C23.5 5.73 18.27.5 12 .5z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.2 8.5-6.2"/></g></symbol>
+  <symbol id="i-scholar" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 1 8.5l11 6.5 9-5.32V17h2V8.5L12 2zM4 13.18v3.32L12 21l8-4.5v-3.32l-8 4.72-8-4.72z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm6 0h3.83v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.84L1.24 2.25h6.83l4.71 6.23 5.46-6.23zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><path d="M8.6 13.4 7.5 21.5 12 19l4.5 2.5-1.1-8.1"/></g></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></g></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M20.5 14.3A8.2 8.2 0 0 1 9.7 3.5a8.2 8.2 0 1 0 10.8 10.8Z"/></symbol>
+</svg>
+
 <a class="skip-link" href="#main">Skip to content</a>
 
-<button class="toggle" id="themeToggle" type="button" aria-label="Switch color theme" aria-pressed="false" title="Switch color theme">
-  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
-    <circle cx="12" cy="12" r="4.2"/>
-    <path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/>
-  </svg>
-  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M20.5 14.3A8.2 8.2 0 0 1 9.7 3.5a8.2 8.2 0 1 0 10.8 10.8Z"/>
-  </svg>
-</button>
-
 <div class="wrap" id="top">
+  <button class="toggle" id="themeToggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Toggle dark mode">
+    <svg class="icon i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+    <svg class="icon i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+  </button>
+
   <header class="intro">
-    <img class="avatar" src="./image/dwl_square.jpg" alt="Portrait of Wenliang Dai" width="116" height="116">
+    <img class="avatar" src="./image/dwl_square.jpg" alt="Portrait of Wenliang Dai" width="124" height="124">
     <div class="intro-text">
       <h1 class="name">Wenliang Dai</h1>
-      <p class="role">Senior Research Scientist <span class="org">@ NVIDIA</span></p>
-      <p class="email">wenliang.dai.1995@gmail.com</p>
+      <p class="position">Senior Research Scientist at <span class="org">NVIDIA</span></p>
+      <ul class="contact" aria-label="Contact and profiles">
+        <li><a href="mailto:wenliang.dai.1995@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>wenliang.dai.1995@gmail.com</a></li>
+        <li><a href="https://scholar.google.com/citations?user=-_xy3jAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-scholar"/></svg>Google Scholar</a></li>
+        <li><a href="https://www.linkedin.com/in/wenliang-dai-145116123/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+        <li><a class="icon-link" href="https://twitter.com/Wenliang_Dai" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+      </ul>
     </div>
   </header>
 
-  <p class="bio">I am a Senior Research Scientist at NVIDIA, working on LLM post-training with a focus on agents, reasoning, and multimodality. Previously, I was a Research Intern at Salesforce Research. I received my Ph.D. from the Hong Kong University of Science and Technology (HKUST) in 2023, advised by Prof. Pascale Fung. Outside of work, I enjoy coffee, hiking, and interesting gadgets, and I have a lovely dog.</p>
+  <p class="bio">I am a Senior Research Scientist at NVIDIA, working on LLM post-training with a focus on agents, reasoning, and multimodality. Previously, I was a Research Intern at Salesforce AI Research. I received my Ph.D. from the Hong Kong University of Science and Technology (HKUST) in 2023, advised by Prof. Pascale Fung. Outside of work, I enjoy coffee, hiking, and interesting gadgets, and I have a lovely dog.</p>
 
-  <nav aria-label="Primary links">
-    <ul class="links">
-      <li><a href="https://scholar.google.com/citations?user=-_xy3jAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 1 8.5l11 6.5 9-5.32V17h2V8.5L12 2zM4 13.18v3.32L12 21l8-4.5v-3.32l-8 4.72-8-4.72z"/></svg>
-        Google Scholar</a></li>
-      <li><a href="https://www.linkedin.com/in/wenliang-dai-145116123/" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm6 0h3.83v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9z"/></svg>
-        LinkedIn</a></li>
-      <li><a href="https://twitter.com/Wenliang_Dai" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.84L1.24 2.25h6.83l4.71 6.23 5.46-6.23zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64z"/></svg>
-        X</a></li>
+  <div class="interests">
+    <h2 class="label">Research Interests</h2>
+    <ul class="tags">
+      <li>Large Language Models</li>
+      <li>Post-Training &amp; Reinforcement Learning</li>
+      <li>Multimodal Learning</li>
     </ul>
-  </nav>
+  </div>
 
   <main id="main">
-    <section id="interests" aria-labelledby="interests-h">
-      <div class="sec-head">
-        <span class="kicker" aria-hidden="true">01</span>
-        <h2 id="interests-h">Research Interests</h2>
-      </div>
-      <ul class="tags">
-        <li>Large Language Models</li>
-        <li>Post-Training &amp; Reinforcement Learning</li>
-        <li>Multimodal Learning</li>
-      </ul>
-    </section>
-
-    <!-- Scholar Metrics — temporarily hidden. To restore: remove this comment wrapper,
-         set the kicker below back to "02", and renumber Research/Experience/Education
-         to 03/04/05. (Values are static now — edit the numbers below by hand.)
+    <!-- Scholar Metrics — temporarily hidden. To restore, remove this comment wrapper.
+         (Values are static — edit the numbers below by hand.)
     <section id="metrics" aria-labelledby="metrics-h">
-      <div class="sec-head">
-        <span class="kicker" aria-hidden="true">02</span>
-        <h2 id="metrics-h">Scholar Metrics</h2>
-      </div>
+      <h2 class="sec-title" id="metrics-h">Scholar Metrics</h2>
       <ul class="metrics">
-        <li><span class="num" id="m-cites">16,500+</span><span class="lbl">Citations</span></li>
-        <li><span class="num" id="m-h">21</span><span class="lbl">h-index</span></li>
-        <li><span class="num" id="m-i10">25</span><span class="lbl">i10-index</span></li>
+        <li><span class="num">16,500+</span><span class="lbl">Citations</span></li>
+        <li><span class="num">21</span><span class="lbl">h-index</span></li>
+        <li><span class="num">25</span><span class="lbl">i10-index</span></li>
       </ul>
-      <span class="metrics-src">As of June 2026, per <a href="https://scholar.google.com/citations?user=-_xy3jAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</span>
+      <span class="metrics-src">As of June 2026, per <a href="https://scholar.google.com/citations?user=-_xy3jAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</span>
     </section>
     -->
 
     <section id="research" aria-labelledby="research-h">
-      <div class="sec-head">
-        <span class="kicker" aria-hidden="true">02</span>
-        <h2 id="research-h">Research</h2>
-      </div>
+      <h2 class="sec-title" id="research-h">Research</h2>
 
       <div class="pub-group">
         <h3 class="subhead">Recent</h3>
         <ol class="pubs">
           <li>
             <p class="pub-title">Nemotron 3 Ultra: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning</p>
-            <p class="pub-meta"><span class="pub-date">Jun 2026</span><span class="role">Core Contributor</span></p>
-            <div class="pub-links">
-              <a href="https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/></svg>Paper</a>
-              <a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="m3.3 7.5 8.7 5 8.7-5"/><path d="M12 22V12.5"/></svg>Model</a>
-            </div>
+            <p class="pub-meta"><span class="pub-date">Jun 2026</span><span class="contrib">Core Contributor</span></p>
+            <p class="pub-links">
+              <a href="https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-paper"/></svg>Paper</a>
+              <a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-model"/></svg>Model</a>
+            </p>
           </li>
           <li>
             <p class="pub-title">Cosmos 3: Omnimodal World Models for Physical AI</p>
             <p class="pub-meta"><span class="pub-date">Jun 2026</span></p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/pdf/2606.02800" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/></svg>Paper</a>
-              <a href="https://github.com/nvidia/cosmos" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12.21c0 5.18 3.36 9.57 8.02 11.12.59.11.8-.26.8-.57v-2.2c-3.26.71-3.95-1.4-3.95-1.4-.53-1.36-1.3-1.72-1.3-1.72-1.07-.73.08-.72.08-.72 1.18.08 1.8 1.22 1.8 1.22 1.05 1.8 2.76 1.28 3.43.98.11-.77.41-1.28.74-1.58-2.6-.3-5.34-1.31-5.34-5.81 0-1.28.46-2.33 1.21-3.15-.12-.3-.52-1.5.12-3.13 0 0 .98-.32 3.22 1.2a11.2 11.2 0 0 1 5.86 0c2.24-1.52 3.22-1.2 3.22-1.2.64 1.63.24 2.83.12 3.13.75.82 1.21 1.87 1.21 3.15 0 4.51-2.75 5.5-5.36 5.79.42.37.8 1.1.8 2.22v3.29c0 .31.21.69.81.57 4.66-1.55 8.01-5.94 8.01-11.12C23.5 5.73 18.27.5 12 .5z"/></svg>GitHub</a>
-            </div>
+            <p class="pub-links">
+              <a href="https://arxiv.org/pdf/2606.02800" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-paper"/></svg>Paper</a>
+              <a href="https://github.com/nvidia/cosmos" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+            </p>
           </li>
           <li>
             <p class="pub-title">Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation</p>
-            <p class="pub-meta"><span class="pub-date">Mar 2026</span><span class="role">First Author</span><span class="award">Gold Medal on IMO &amp; IOI</span></p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/pdf/2603.19220" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/></svg>Paper</a>
-              <a href="https://huggingface.co/nvidia/Nemotron-Cascade-2-30B-A3B" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="m3.3 7.5 8.7 5 8.7-5"/><path d="M12 22V12.5"/></svg>Model</a>
-            </div>
+            <p class="pub-meta"><span class="pub-date">Mar 2026</span><span class="contrib">First Author</span><span class="award"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg>Gold Medal on IMO &amp; IOI</span></p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/pdf/2603.19220" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-paper"/></svg>Paper</a>
+              <a href="https://huggingface.co/nvidia/Nemotron-Cascade-2-30B-A3B" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-model"/></svg>Model</a>
+            </p>
           </li>
           <li>
             <p class="pub-title">Nemotron-Cascade: Scaling Cascaded Reinforcement Learning for General-Purpose Reasoning Models</p>
-            <p class="pub-meta"><span class="pub-date">Dec 2025</span><span class="role">First Author</span></p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/pdf/2512.13607" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/></svg>Paper</a>
-              <a href="https://huggingface.co/nvidia/Nemotron-Cascade-14B-Thinking" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="m3.3 7.5 8.7 5 8.7-5"/><path d="M12 22V12.5"/></svg>Model</a>
-            </div>
+            <p class="pub-meta"><span class="pub-date">Dec 2025</span><span class="contrib">First Author</span></p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/pdf/2512.13607" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-paper"/></svg>Paper</a>
+              <a href="https://huggingface.co/nvidia/Nemotron-Cascade-14B-Thinking" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-model"/></svg>Model</a>
+            </p>
           </li>
         </ol>
       </div>
@@ -674,44 +579,41 @@
         <ol class="pubs">
           <li>
             <p class="pub-title">InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning</p>
-            <p class="pub-meta"><span class="pub-date">May 2023</span><span class="role">First Author</span></p>
-            <div class="pub-links">
-              <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/9a6a435e75419a836fe47ab6793623e6-Paper-Conference.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/></svg>Paper</a>
-              <a href="https://github.com/salesforce/LAVIS/tree/main/projects/instructblip" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12.21c0 5.18 3.36 9.57 8.02 11.12.59.11.8-.26.8-.57v-2.2c-3.26.71-3.95-1.4-3.95-1.4-.53-1.36-1.3-1.72-1.3-1.72-1.07-.73.08-.72.08-.72 1.18.08 1.8 1.22 1.8 1.22 1.05 1.8 2.76 1.28 3.43.98.11-.77.41-1.28.74-1.58-2.6-.3-5.34-1.31-5.34-5.81 0-1.28.46-2.33 1.21-3.15-.12-.3-.52-1.5.12-3.13 0 0 .98-.32 3.22 1.2a11.2 11.2 0 0 1 5.86 0c2.24-1.52 3.22-1.2 3.22-1.2.64 1.63.24 2.83.12 3.13.75.82 1.21 1.87 1.21 3.15 0 4.51-2.75 5.5-5.36 5.79.42.37.8 1.1.8 2.22v3.29c0 .31.21.69.81.57 4.66-1.55 8.01-5.94 8.01-11.12C23.5 5.73 18.27.5 12 .5z"/></svg>GitHub</a>
-              <a href="https://huggingface.co/Salesforce/instructblip-vicuna-7b" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="m3.3 7.5 8.7 5 8.7-5"/><path d="M12 22V12.5"/></svg>Model</a>
-            </div>
+            <p class="pub-meta"><span class="pub-date">May 2023</span><span class="contrib">First Author</span></p>
+            <p class="pub-links">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/9a6a435e75419a836fe47ab6793623e6-Paper-Conference.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-paper"/></svg>Paper</a>
+              <a href="https://github.com/salesforce/LAVIS/tree/main/projects/instructblip" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+              <a href="https://huggingface.co/Salesforce/instructblip-vicuna-7b" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-model"/></svg>Model</a>
+            </p>
           </li>
           <li>
             <p class="pub-title">NVLM: Open Frontier-Class Multimodal LLMs</p>
-            <p class="pub-meta"><span class="pub-date">Sep 2024</span><span class="role">First Author</span></p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/pdf/2409.11402" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/></svg>Paper</a>
-              <a href="https://huggingface.co/nvidia/NVLM-D-72B" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="m3.3 7.5 8.7 5 8.7-5"/><path d="M12 22V12.5"/></svg>Model</a>
-            </div>
+            <p class="pub-meta"><span class="pub-date">Sep 2024</span><span class="contrib">First Author</span></p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/pdf/2409.11402" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-paper"/></svg>Paper</a>
+              <a href="https://huggingface.co/nvidia/NVLM-D-72B" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-model"/></svg>Model</a>
+            </p>
           </li>
           <li>
             <p class="pub-title">A Multitask, Multilingual, Multimodal Evaluation of ChatGPT on Reasoning, Hallucination, and Interactivity</p>
-            <p class="pub-meta"><span class="pub-date">Feb 2023</span><span class="role">Core Contributor</span><span class="award">Area Chair Award (Language Modeling and Analysis)</span></p>
-            <div class="pub-links">
-              <a href="https://aclanthology.org/2023.ijcnlp-main.45.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/></svg>Paper</a>
-            </div>
+            <p class="pub-meta"><span class="pub-date">Feb 2023</span><span class="contrib">Core Contributor</span><span class="award"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg>Area Chair Award (Language Modeling and Analysis)</span></p>
+            <p class="pub-links">
+              <a href="https://aclanthology.org/2023.ijcnlp-main.45.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-paper"/></svg>Paper</a>
+            </p>
           </li>
           <li>
             <p class="pub-title">Survey of Hallucination in Natural Language Generation</p>
             <p class="pub-meta"><span class="pub-date">Feb 2022</span></p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/pdf/2202.03629" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/></svg>Paper</a>
-            </div>
+            <p class="pub-links">
+              <a href="https://arxiv.org/pdf/2202.03629" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-paper"/></svg>Paper</a>
+            </p>
           </li>
         </ol>
       </div>
     </section>
 
     <section id="experience" aria-labelledby="exp-h">
-      <div class="sec-head">
-        <span class="kicker" aria-hidden="true">03</span>
-        <h2 id="exp-h">Experience</h2>
-      </div>
+      <h2 class="sec-title" id="exp-h">Experience</h2>
       <div class="entry">
         <div class="when">Oct 2023 &ndash; Present</div>
         <div class="body">
@@ -724,7 +626,7 @@
         <div class="when">Feb 2023 &ndash; May 2023</div>
         <div class="body">
           <span class="title">Research Intern</span>
-          <div class="place">Salesforce Research</div>
+          <div class="place">Salesforce AI Research</div>
           <p class="detail">Multimodal LLMs; trained one of the first well-established instruction-tuned VLMs (InstructBLIP).</p>
         </div>
       </div>
@@ -739,10 +641,7 @@
     </section>
 
     <section id="education" aria-labelledby="edu-h">
-      <div class="sec-head">
-        <span class="kicker" aria-hidden="true">04</span>
-        <h2 id="edu-h">Education</h2>
-      </div>
+      <h2 class="sec-title" id="edu-h">Education</h2>
       <div class="entry">
         <div class="when">2019 &ndash; 2023</div>
         <div class="body">
@@ -767,51 +666,28 @@
     </section>
   </main>
 
-  <footer id="contact">
-    <span>&copy; <span id="year">2026</span> Wenliang Dai</span>
+  <footer>
+    &copy; <span id="year">2026</span> Wenliang Dai
   </footer>
 </div>
 
 <script>
   (function () {
     var root = document.documentElement;
-    var KEY = "theme-preference";
-    var media = window.matchMedia("(prefers-color-scheme: dark)");
     var btn = document.getElementById("themeToggle");
 
-    var stored = null;
-    try { stored = localStorage.getItem(KEY); } catch (e) {}
-    if (stored === "light" || stored === "dark") {
-      root.setAttribute("data-theme", stored);
-    }
+    function isDark() { return root.getAttribute("data-theme") === "dark"; }
+    function sync() { btn.setAttribute("aria-pressed", String(isDark())); }
 
-    function syncPressed() {
-      if (!btn) return;
-      var current = root.getAttribute("data-theme");
-      var isDark = current ? current === "dark" : media.matches;
-      btn.setAttribute("aria-pressed", String(isDark));
-    }
-    syncPressed();
+    sync();
+    btn.addEventListener("click", function () {
+      var next = isDark() ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme-preference", next); } catch (e) {}
+      sync();
+    });
 
-    if (btn) {
-      btn.addEventListener("click", function () {
-        var current = root.getAttribute("data-theme");
-        if (!current) { current = media.matches ? "dark" : "light"; }
-        var next = current === "dark" ? "light" : "dark";
-        root.setAttribute("data-theme", next);
-        try { localStorage.setItem(KEY, next); } catch (e) {}
-        syncPressed();
-      });
-    }
-
-    if (media.addEventListener) {
-      media.addEventListener("change", syncPressed);
-    } else if (media.addListener) {
-      media.addListener(syncPressed);
-    }
-
-    var y = document.getElementById("year");
-    if (y) { y.textContent = String(new Date().getFullYear()); }
+    document.getElementById("year").textContent = String(new Date().getFullYear());
   })();
 </script>
 </body>
