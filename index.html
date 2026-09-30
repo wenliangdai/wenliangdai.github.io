@@ -211,14 +211,18 @@
   }
   .position .org { color: var(--text); font-weight: 500; }
 
-  .contact {
+  .contact,
+  .profiles {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.35rem 1.15rem;
-    margin: 0.8rem 0 0;
+    margin: 0;
     padding: 0;
     list-style: none;
+  }
+  .contact {
+    margin-top: 0.8rem;
     font-size: 0.9rem;
     line-height: 1.4;
   }
@@ -501,9 +505,14 @@
       <p class="position">Senior Research Scientist at <span class="org">NVIDIA</span></p>
       <ul class="contact" aria-label="Contact and profiles">
         <li><a href="mailto:wenliang.dai.1995@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>wenliang.dai.1995@gmail.com</a></li>
-        <li><a href="https://scholar.google.com/citations?user=-_xy3jAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-scholar"/></svg>Google Scholar</a></li>
-        <li><a href="https://www.linkedin.com/in/wenliang-dai-145116123/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
-        <li><a class="icon-link" href="https://twitter.com/Wenliang_Dai" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+        <li>
+          <!-- Grouped so the profiles wrap together, leaving the email on its own line when space is tight -->
+          <ul class="profiles">
+            <li><a href="https://scholar.google.com/citations?user=-_xy3jAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-scholar"/></svg>Google Scholar</a></li>
+            <li><a href="https://www.linkedin.com/in/wenliang-dai-145116123/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+            <li><a class="icon-link" href="https://twitter.com/Wenliang_Dai" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </header>
